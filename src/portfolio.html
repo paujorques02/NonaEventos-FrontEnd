@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="es"><head>
+<meta charset="utf-8"/>
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+<link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Epilogue%3Awght%40400%3B500%3B700%3B900" onload="this.rel='stylesheet'" rel="stylesheet"/>
+<title>Portafolio de Eventful</title>
+<link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#ee2b8c",
+              "background-light": "#f8f6f7",
+              "background-dark": "#221019",
+            },
+            fontFamily: {
+              display: ["Epilogue"],
+            },
+            borderRadius: { DEFAULT: "0.5rem", lg: "1rem", xl: "1.5rem", full: "9999px" },
+          },
+        },
+      };
+    </script>
+<style>
+      .event-gallery-trigger {
+        cursor: pointer;
+      }
+      #lightbox-prev, #lightbox-next {
+        transition: opacity 0.2s ease-in-out;
+      }
+      #lightbox-prev:hover, #lightbox-next:hover {
+        opacity: 0.7;
+      }
+    </style>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-background-dark dark:text-background-light">
+<header class="sticky top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm border-b border-background-dark/10 dark:border-background-light/10">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex h-16 items-center justify-between">
+<div class="flex items-center gap-4">
+<svg class="h-6 w-6 text-primary" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M42.4379 44C42.4379 44 36.0744 33.9038 41.1692 24C46.8624 12.9336 42.2078 4 42.2078 4L7.01134 4C7.01134 4 11.6577 12.932 5.96912 23.9969C0.876273 33.9029 7.27094 44 7.27094 44L42.4379 44Z" fill="currentColor"></path>
+</svg>
+<h2 class="text-xl font-bold">Eventful</h2>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-sm font-medium hover:text-primary transition-colors" href="index.html">Inicio</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="servicios.html">Servicios</a>
+<a class="text-sm font-medium text-primary" href="portfolio.html">Portafolio</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="sobre-mi.html">Sobre Mí</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="contacto.html">Contacto</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="bg-primary text-white px-4 py-2 rounded-full text-sm font-bold tracking-wide hover:opacity-90 transition-opacity" onclick="window.location.href='contacto.html'">
+              Solicitar Presupuesto
+            </button>
+</div>
+</div>
+</div>
+</header>
+<main class="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
+<div class="text-center mb-12">
+<h1 class="text-4xl md:text-5xl font-bold tracking-tight">Nuestro Portafolio</h1>
+<p class="mt-4 text-lg text-background-dark/60 dark:text-background-light/60 max-w-2xl mx-auto">
+          Explora nuestra galería de eventos pasados, que muestra nuestra experiencia en la creación de momentos inolvidables.
+        </p>
+</div>
+<div class="space-y-16">
+<div>
+<div class="flex items-center mb-6">
+<h2 class="text-3xl font-bold">Bodas</h2>
+<div class="flex-grow ml-4 border-t border-background-dark/20 dark:border-background-light/20"></div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Evento de Ejemplo: Boda de Javi y Luis. Las imágenes de la galería están en el atributo data-gallery-images -->
+<div class="event-gallery-trigger group block" data-gallery-images='[
+              "https://lh3.googleusercontent.com/aida-public/AB6AXuCPsbDsM3GqVODOXsv8j6mEwsePRpznH8U95vAGXvIEi7cWt19QgZYY7y-zbJWfROPYivF_jADjzXLMZm_lapQr9OxISUR6M6HYako_9In9RLWsqq-0_ydJIo_od7b3W5ldxdAUcsfRfE2T0qw30vgCuenApnZ_sfzPyxKVwgnKYDA0O_IBitfKWey-cl_p0sGOaIzFH5ReTJEhrpFqPkVcbLcm3RQmJ8i_mKUQmpXgouQ_uazUQRKEtv1K6nO1h_-Ue93LC7rBqMJB",
+              "https://lh3.googleusercontent.com/aida-public/AB6AXuD4MsYNTxyT5UcRcnKesZD9WBU0UYP4ttYV3h_2P0Q-93xKmeRD3k8Ge-JWGqBfOrU6Rv5vMI21jy24tc14kSDGzOOxT1iGBc2isVI6xM8BCknY0Qu6OJ3vHeUHB6fMN4psvQsFamqYgO1a69wEjIuPcfqsTuhUCPFzJf1CaC_UlYy9J-iI1rN0baJ7Z7JqS_tiqohqLXBMsV3ck9uYdcrWpJlWOhMMHmnnxAeLA6XFBivdCZq2aqEO7k2aGUWDYSvzB-0Q7j-_eX4L",
+              "https://lh3.googleusercontent.com/aida-public/AB6AXuCCmvAFn__ZscV6n32H-hqrhwjUYqTrgYHolRLjCf74uq4IsCeih7DLyAqRwPGQMjtw7SsercGVGh0nENU8aWkzaHlw-6vWwP-tyP8TqDdmLVQMwc9Q9dK9nwEY4QD7fZJJNc04MnuVGUFGinz3wUqoESxadyBEfOvmWv-URPoMpU8VUy94BMqc_T6Fi86wWiDb2TvhQzqwu2qoAkf7uMkIYrK_Mqbd44qH9z-JCgG6PTM4S8AdFX3zMmjUuweqEDLbH0W5nJeGozWD",
+              "https://lh3.googleusercontent.com/aida-public/AB6AXuDnSr1UhbInr6J_4htwNWWLYCuRozfw59xWZjgGWPTjfJ3hL4jwQMQfWFe0obKxhZ-8LXCpL3OrfURv98b0EQphMYl0mmFyTb0vYRVvPZ_60lOLTWbnVq5i0vq2ViZ0BwWQ2vXp_V-CTSAGyawmsegTQ0TrS39gU8UfaoMpJJC5yT5VDamc-4A2TOcV7k28NrqSNmWv3usBYyol2FNvCbysR1clkGHLjO8iUA8UCmU63gnDmCcU6DX8ldgmuFT0eZfN1XekS9h5RzQz",
+              "https://lh3.googleusercontent.com/aida-public/AB6AXuBVFKmGH3BdRNDA7qN-C1y8ivsWVfc-yJ3lp_P8X_xmwzHtTugJ7VOP8A6etHa_2svejacjw2YpHSoukGYYYddvp5P5tLSc1vUzREBlfnGb7VpjSLmJdByGK6_QOIR7_T8RW681XOdECgxZO1hep2-GfOD8BTgoLxyG1EEuWvXxlqPiEvFPEV7fIFHMzPwBkkedZvb6y4z0ucR4noeYfU6vtIytVKX6pMw3MJurqpoFBDLy91ShF0AFSLFTFu6Yphs7DBL89Ir3CyjI",
+              "https://lh3.googleusercontent.com/aida-public/AB6AXuDMoyOBrJdBg5MZKS8Ad0OIUsLaOOvgOGSVde4NUseX3T4Juymknet1ocT-qI1O_BTJg2BBG_DWWG7DdGFtAI5OHncO-z40E9rPGwgmPC4bRzbbe7oSnr4Kq6osQ5u1Iwpieu71hGQcLXwN_kdEgnRCxji6nYThhOurpD2fPu2_syG3bPzW97g8i7T_GvNi1ha_6XN_F19jctYHDUHevYvh6eD-ePY80T8yXu8wcycq7szv6nL7CgdwQj-beJCJEd5Awwd4Xm-rWpnD"
+            ]'>
+<div class="overflow-hidden rounded-lg shadow-lg">
+<img alt="Boda de Javi y Luis" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDnSr1UhbInr6J_4htwNWWLYCuRozfw59xWZjgGWPTjfJ3hL4jwQMQfWFe0obKxhZ-8LXCpL3OrfURv98b0EQphMYl0mmFyTb0vYRVvPZ_60lOLTWbnVq5i0vq2ViZ0BwWQ2vXp_V-CTSAGyawmsegTQ0TrS39gU8UfaoMpJJC5yT5VDamc-4A2TOcV7k28NrqSNmWv3usBYyol2FNvCbysR1clkGHLjO8iUA8UCmU63gnDmCcU6DX8ldgmuFT0eZfN1XekS9h5RzQz"/>
+</div>
+<div class="mt-4">
+<h3 class="text-xl font-bold">Boda de Javi y Luis</h3>
+<p class="text-sm text-background-dark/60 dark:text-background-light/60">Ver galería</p>
+</div>
+</div>
+<!-- Aquí puedes añadir más bodas -->
+</div>
+</div>
+<div>
+<div class="flex items-center mb-6">
+<h2 class="text-3xl font-bold">Cumpleaños</h2>
+<div class="flex-grow ml-4 border-t border-background-dark/20 dark:border-background-light/20"></div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Evento de Ejemplo: Cumpleaños de Sofía -->
+<div class="event-gallery-trigger group block" data-gallery-images='[
+              "https://lh3.googleusercontent.com/aida-public/AB6AXuBgqP-8n9ICxE7kPq0Gj6dSdAsP_tOEdOCeC-_m2Q4u5vsZD_gXlGSnEliqaWwH5aJMAhLs2F36gtbWx6beuVlGLIiHvNpa503WB-6t4xKicMwmP6aKGsLOnziHwsAVMBZGo4bfMTj2Mga_Y_osOfhvLD5Cfks8-ZYkFVpOuK3NDTp2X_d4n6W4DgAaMHc1ifCaW97Z2LkWASt8deonF1xuKYMv6KeA3XN-4yUJ5t5OzjkAL3bIulDc0EjuA1uyxSaFTYiAC19LCneF",
+              "https://lh3.googleusercontent.com/aida-public/AB6AXuBDfaTTQTqYJ3yZ9yp0PWgDfSrfLHcRSuqWiHHEECZKadJg2eurlexn1E9AKZaGkYLbd4oFNHcCGfDgH6L5KzWXtwNsY7-4RL5uqIBwWrYMWPcjwbT9ahp5VSj6PZyVr-71RhPWk0YtcYN9wyfZZIJI18u2QuAVeU-gfimjJj2cxG_eqh2aULopdGV93mNb455Fj8uOhtOzRhLBYMwpAM0sG0gKLGEFAL3o1zUCygfzIDAG67qgntMOM-CgeEjD_YC_cbxvXQULJDVq",
+              "https://lh3.googleusercontent.com/aida-public/AB6AXuBUT23DLd5U1671b9H_mVaBhdVVvFGdlrC54_lu8XhKiQsw0kLyIYrpwXszUSnf63iA2-9VkuK9tZeGFBRVSCNkejRbfIRvOB-oFDgOw2lJJzn6KQMb-0yBfZ87Y8dWlP6j5_9mWacqD1qZzQdBn8sWFrJUIkEBHRevaE4mgOmC2ccmJo6B1sGA29dtH3SDgdT_h1uaMXWuhhzWZqGu1gz0Q-UcoJgl0z49HyxQfmzQxNZkJAtbz8hlvYKEYtkoq9EW15H68R-UXm0m",
+              "https://lh3.googleusercontent.com/aida-public/AB6AXuA5uwyt8VEIV2wkj3XUXdxcWpDGPRG2bQlhSA7-YWDx36eYunirkKIJOk5GCPehilEBkFdCNGz02zgSprKDy2qxbcWScz6enbKHpnFhMaDzQ4jkYIXqktJeImPjrep8OW3qLkYMyY9jQI3IPCLHeKnUU7r_E2cboP-4vWdjazOmjvpgm5P8kob1ufyxB3cfn-eqTC7ZWLNS8By5D1HgqpleaLMdizTaKv82Z8P3YgCNVqWLFyn0BuFb2m2w5bG0K178aOLI9Q5NobLN"
+            ]'>
+<div class="overflow-hidden rounded-lg shadow-lg">
+<img alt="Cumpleaños de Sofía" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBgqP-8n9ICxE7kPq0Gj6dSdAsP_tOEdOCeC-_m2Q4u5vsZD_gXlGSnEliqaWwH5aJMAhLs2F36gtbWx6beuVlGLIiHvNpa503WB-6t4xKicMwmP6aKGsLOnziHwsAVMBZGo4bfMTj2Mga_Y_osOfhvLD5Cfks8-ZYkFVpOuK3NDTp2X_d4n6W4DgAaMHc1ifCaW97Z2LkWASt8deonF1xuKYMv6KeA3XN-4yUJ5t5OzjkAL3bIulDc0EjuA1uyxSaFTYiAC19LCneF"/>
+</div>
+<div class="mt-4">
+<h3 class="text-xl font-bold">Cumpleaños de Sofía</h3>
+<p class="text-sm text-background-dark/60 dark:text-background-light/60">Ver galería</p>
+</div>
+</div>
+</div>
+<div>
+<div class="flex items-center mb-6">
+<h2 class="text-3xl font-bold">Eventos Corporativos</h2>
+<div class="flex-grow ml-4 border-t border-background-dark/20 dark:border-background-light/20"></div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Evento de Ejemplo: Conferencia Anual TechCorp -->
+<div class="event-gallery-trigger group block" data-gallery-images='[
+              "https://lh3.googleusercontent.com/aida-public/AB6AXuA1MDwxfRrBn69sFsVhgGcOwSROYF793mNVwCLOLylHGECi8BchOGQy41zNvbZfAen8mUhzADqmKxWT2QONliPReaDvyPP-rg5Z70pWQc4laY-IdlHz6iZAq0xwuxVszLXaCnxrkrHbEH9lyui7qsnIb4Evvs2fzvheuknF7GCgrfddQHyiw5El8WdNASZYvRXGSnKFbXSv1A98CCgWA5j_PdUc3meFoWlJibQW30Cxst4c8qS8LFyHJC5lOrMOfSCKFAugXQ6EXqxD",
+              "https://lh3.googleusercontent.com/aida-public/AB6AXuC_HuG1YecFsz0xcXwXa8Nuu3Z-exXJyQkiIE0ZZAdEM8ieM6NkyRHA-IzPod66jCBpafn1Xvy9mAtylNTgWLORx6UD4TQwjP8fcXz-SJodfGxTWFd05SATZPoZ5vhs9s_o-ca3yNf2rgxrOPRrLJhWAjfUEJRjmytylE5V5Ix8C0R3SZRkujiPytkaOjSYOSC3obppbFp23VmlM-sK08_-70D9B0Igr3j4tiVWYYX9baofZZPw3-9n_jIOcD3QTAGPG1HrstIf_XDD",
+              "https://lh3.googleusercontent.com/aida-public/AB6AXuDj7Jy-PdzixUk9CGHGHYxL9h944lv047nJ1bhRsksQFCQr_GAH2CsVMkW0dtXO5JZWOBvOq2nKNjXleZNYOT_GSKZ4uquWc8t5Mj5Wrr-2iCiVjEsc4rUWLEuBDOMfIg28L-Z5ZZHzlyxvlfGV2zN8jEEk9E4jHFee1Rrmszf50ZqvxAdaMYKIfo6MvvIAPM-okdVokNhZzL9X2KL_-K_5fkFZ3nkGvCoToPsyBTzE6hoQqcmu30Lch-0sAgbbTQFz-25AN_tMFWFr"
+            ]'>
+<div class="overflow-hidden rounded-lg shadow-lg">
+<img alt="Conferencia Anual TechCorp" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA1MDwxfRrBn69sFsVhgGcOwSROYF793mNVwCLOLylHGECi8BchOGQy41zNvbZfAen8mUhzADqmKxWT2QONliPReaDvyPP-rg5Z70pWQc4laY-IdlHz6iZAq0xwuxVszLXaCnxrkrHbEH9lyui7qsnIb4Evvs2fzvheuknF7GCgrfddQHyiw5El8WdNASZYvRXGSnKFbXSv1A98CCgWA5j_PdUc3meFoWlJibQW30Cxst4c8qS8LFyHJC5lOrMOfSCKFAugXQ6EXqxD"/>
+</div>
+<div class="mt-4">
+<h3 class="text-xl font-bold">Conferencia Anual TechCorp</h3>
+<p class="text-sm text-background-dark/60 dark:text-background-light/60">Ver galería</p>
+</div>
+</div>
+</div>
+<div>
+<div class="flex items-center mb-6">
+<h2 class="text-3xl font-bold">Comuniones</h2>
+<div class="flex-grow ml-4 border-t border-background-dark/20 dark:border-background-light/20"></div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Evento de Ejemplo: Comunión de Mateo -->
+<div class="event-gallery-trigger group block" data-gallery-images='[
+              "https://lh3.googleusercontent.com/aida-public/AB6AXuAD43GLltHRmes2mACzeiJoulReYyxKOIy0dXnpAmzgAKq9FrcvxckVJfDnuLUDybBrvmhfWwBA0y1eMcYJIMP2euQUFJ80gfIqIxzxmOTZ5NL5R1XiVZ8J-XWigjKEfJdbIVayMOduTO57k6Hf5EQfSo-6hoi6yvSAY61F4rtaIWKtMV2-CUc6Rx754RfS_wpf_BFT_n8x6IuOPU3V68k6Rx9kXTfYxE-bUV1wZa9hasKDl8grs-Wl1hO00_plVeb2Dseld_PpPVdQ",
+              "https://lh3.googleusercontent.com/aida-public/AB6AXuBa7T7zH6ADlRKjlzKyzO86xCU0ihI9E4-9IUPDLapt7XBlP18u6HbLuAKVElafdVYO1aYDlMuzHpiU8jqDEDpAXqUm8WsfgcqwyOVmrfb3efRzL6-RumsvnnRSY_8MKnGWOwiIWnf8xpMgk5z3_3FP-pxrj2ZKGMwk_AiT-_9wzth9-L1cbX-8DeVYcvxQZWNLUbMOUg5HuVQHFWmQlc664vKFYfwXHiWpvRQ87NwVl_prK77bP8ohnWJXxwtJD2UZmj0NUNTmb9p0",
+              "https://lh3.googleusercontent.com/aida-public/AB6AXuAtxOMmQLZtVZfVG15bvV3LKm84ARDOFvsgeI3LEMBxyLpcTzW_uYgXDt7fGbdcC82U-gU16MCfbGeQ-9JLCr4FiuBuLuAxDJiwbRLhsx0Ct6yxJnD7cJthSINK2H-eyKzjctx4xWY0YSu3ghKT2go1pDlUFu58M9h8PHQJdEa9EK91alWS8zYrvb_6QVnypaNfBg8UsQsgkSQmycDAg0psp28B2_qayTeFiaSBI-ztnWgsF-h_RhRTuYEvVkbHiQrKxkIRqessDtWz",
+              "https://lh3.googleusercontent.com/aida-public/AB6AXuCMk5-F4vmqEct0kOmJbcJRMBdFtz6pmRyTPEVbqrN-UXeIHJHkwZzVQkpAkoeSrFJJpbcbrKEnmJOpEoYrfFrZhh_aVXQOMxqLGgPwCpA0_hIQzbnWeO0Qk1EehKzWghsvMMe59eKdy-lsOtxPbMX1Lt3uPsqvgRLEOKJj7n5JJFK3Zk9Mw4ANmo05D4pr2PwpNeaFd_UwbYc4FTQb5MZOe0lkz5NHLFTckNRExNqXyBuM_R2T_MsFn3MG-ZWbsLptCElugvSKDY_L"
+            ]'>
+<div class="overflow-hidden rounded-lg shadow-lg">
+<img alt="Comunión de Mateo" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAD43GLltHRmes2mACzeiJoulReYyxKOIy0dXnpAmzgAKq9FrcvxckVJfDnuLUDybBrvmhfWwBA0y1eMcYJIMP2euQUFJ80gfIqIxzxmOTZ5NL5R1XiVZ8J-XWigjKEfJdbIVayMOduTO57k6Hf5EQfSo-6hoi6yvSAY61F4rtaIWKtMV2-CUc6Rx754RfS_wpf_BFT_n8x6IuOPU3V68k6Rx9kXTfYxE-bUV1wZa9hasKDl8grs-Wl1hO00_plVeb2Dseld_PpPVdQ"/>
+</div>
+<div class="mt-4">
+<h3 class="text-xl font-bold">Comunión de Mateo</h3>
+<p class="text-sm text-background-dark/60 dark:text-background-light/60">Ver galería</p>
+</div>
+</div>
+</div>
+</div>
+</main>
+<footer class="bg-background-light/50 dark:bg-background-dark/50 border-t border-background-dark/10 dark:border-background-light/10">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
+<div class="flex flex-col md:flex-row items-center justify-between gap-8">
+<div class="flex items-center gap-4">
+<svg class="h-6 w-6 text-primary" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M42.4379 44C42.4379 44 36.0744 33.9038 41.1692 24C46.8624 12.9336 42.2078 4 42.2078 4L7.01134 4C7.01134 4 11.6577 12.932 5.96912 23.9969C0.876273 33.9029 7.27094 44 7.27094 44L42.4379 44Z" fill="currentColor"></path>
+</svg>
+<h2 class="text-xl font-bold">Eventful</h2>
+</div>
+<nav class="flex flex-wrap justify-center gap-x-8 gap-y-4">
+<a class="text-sm text-background-dark/60 dark:text-background-light/60 hover:text-primary transition-colors" href="index.html">Inicio</a>
+<a class="text-sm text-background-dark/60 dark:text-background-light/60 hover:text-primary transition-colors" href="servicios.html">Servicios</a>
+<a class="text-sm text-background-dark/60 dark:text-background-light/60 hover:text-primary transition-colors" href="portfolio.html">Portafolio</a>
+<a class="text-sm text-background-dark/60 dark:text-background-light/60 hover:text-primary transition-colors" href="sobre-mi.html">Sobre Mí</a>
+<a class="text-sm text-background-dark/60 dark:text-background-light/60 hover:text-primary transition-colors" href="contacto.html">Contacto</a>
+</nav>
+<div class="flex gap-4">
+<a class="text-background-dark/60 dark:text-background-light/60 hover:text-primary dark:hover:text-primary transition-colors" href="#">
+<svg fill="currentColor" height="24px" viewBox="0 0 256 256" width="24px" xmlns="http://www.w3.org/2000/svg"><path d="M128,80a48,48,0,1,0,48,48A48.05,48.05,0,0,0,128,80Zm0,80a32,32,0,1,1,32-32A32,32,0,0,1,128,160ZM176,24H80A56.06,56.06,0,0,0,24,80v96a56.06,56.06,0,0,0,56,56h96a56.06,56.06,0,0,0,56-56V80A56.06,56.06,0,0,0,176,24Zm40,152a40,40,0,0,1-40,40H80a40,40,0,0,1-40-40V80A40,40,0,0,1,80,40h96a40,40,0,0,1,40,40ZM192,76a12,12,0,1,1-12-12A12,12,0,0,1,192,76Z"></path></svg>
+</a>
+<a class="text-background-dark/60 dark:text-background-light/60 hover:text-primary dark:hover:text-primary transition-colors" href="#">
+<svg fill="currentColor" height="24px" viewBox="0 0 256 256" width="24px" xmlns="http://www.w3.org/2000/svg"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm8,191.63V152h24a8,8,0,0,0,0-16H136V112a16,16,0,0,1,16-16h16a8,8,0,0,0,0-16H152a32,32,0,0,0-32,32v24H96a8,8,0,0,0,0,16h24v63.63a88,88,0,1,1,16,0Z"></path></svg>
+</a>
+<a class="text-background-dark/60 dark:text-background-light/60 hover:text-primary dark:hover:text-primary transition-colors" href="#">
+<svg fill="currentColor" height="24px" viewBox="0 0 256 256" width="24px" xmlns="http://www.w3.org/2000/svg"><path d="M247.39,68.94A8,8,0,0,0,240,64H209.57A48.66,48.66,0,0,0,168.1,40a46.91,46.91,0,0,0-33.75,13.7A47.9,47.9,0,0,0,120,88v6.09C79.74,83.47,46.81,50.72,46.46,50.37a8,8,0,0,0-13.65,4.92c-4.31,47.79,9.57,79.77,22,98.18a110.93,110.93,0,0,0,21.88,24.2c-15.23,17.53-39.21,26.74-39.47,26.84a8,8,0,0,0-3.85,11.93c.75,1.12,3.75,5.05,11.08,8.72C53.51,229.7,65.48,232,80,232c70.67,0,129.72-54.42,135.75-124.44l29.91-29.9A8,8,0,0,0,247.39,68.94Zm-45,29.41a8,8,0,0,0-2.32,5.14C196,166.58,143.28,216,80,216c-10.56,0-18-1.4-23.22-3.08,11.51-6.25,27.56-17,37.88-32.48A8,8,0,0,0,92,169.08c-.47-.27-43.91-26.34-44-96,16,13,45.25,33.17,78.67,38.79A8,8,0,0,0,136,104V88a32,32,0,0,1,9.6-22.92A30.94,30.94,0,0,1,167.9,56c12.66.16,24.49,7.88,29.44,19.21A8,8,0,0,0,204.67,80h16Z"></path></svg>
+</a>
+</div>
+</div>
+<div class="mt-8 pt-8 border-t border-background-dark/10 dark:border-background-light/10 text-center text-sm text-background-dark/60 dark:text-background-light/60">
+<p>© 2024 Eventful. Todos los derechos reservados.</p>
+</div>
+</div>
+</footer>
+<!-- Lightbox Modal -->
+<div id="lightbox" class="fixed inset-0 z-[100] hidden items-center justify-center bg-black/80 p-4" style="backdrop-filter: blur(4px);">
+<button id="lightbox-close" class="absolute top-5 right-6 text-white text-4xl font-bold hover:opacity-70 transition-opacity">
+<span class="material-symbols-outlined text-4xl">close</span>
+</button>
+<button id="lightbox-prev" class="absolute left-5 md:left-10 text-white p-2 rounded-full bg-black/20 hover:bg-black/40 transition-colors">
+<span class="material-symbols-outlined text-4xl">arrow_back_ios_new</span>
+</button>
+<button id="lightbox-next" class="absolute right-5 md:right-10 text-white p-2 rounded-full bg-black/20 hover:bg-black/40 transition-colors">
+<span class="material-symbols-outlined text-4xl">arrow_forward_ios</span>
+</button>
+<div class="relative">
+<img id="lightbox-image" src="" alt="Imagen ampliada" class="max-h-[90vh] max-w-[90vw] object-contain rounded-lg shadow-2xl">
+<p>© 2024 Eventful. Todos los derechos reservados.</p>
+</div>
+</div>
+</footer>
+</div>
+</div>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const galleryTriggers = document.querySelectorAll('.event-gallery-trigger');
+      const lightbox = document.getElementById('lightbox');
+      const lightboxImage = document.getElementById('lightbox-image');
+      const lightboxClose = document.getElementById('lightbox-close');
+      const lightboxPrev = document.getElementById('lightbox-prev');
+      const lightboxNext = document.getElementById('lightbox-next');
+
+      if (!lightbox) return;
+
+      let currentImages = [];
+      let currentIndex = 0;
+
+      function showImage(index) {
+        if (index < 0 || index >= currentImages.length) return;
+        currentIndex = index;
+        lightboxImage.src = currentImages[currentIndex];
+        lightbox.classList.remove('hidden');
+        lightbox.classList.add('flex');
+      }
+
+      function hideLightbox() {
+        lightbox.classList.add('hidden');
+        lightbox.classList.remove('flex');
+        currentImages = [];
+      }
+
+      galleryTriggers.forEach(trigger => {
+        trigger.addEventListener('click', () => {
+          const imagesJson = trigger.dataset.galleryImages;
+          if (imagesJson) {
+            try {
+              currentImages = JSON.parse(imagesJson.replace(/'/g, '"'));
+              if (currentImages.length > 0) {
+                showImage(0);
+              }
+            } catch (e) {
+              console.error("Error al parsear las imágenes de la galería:", e);
+            }
+          }
+        });
+      });
+
+      lightboxClose.addEventListener('click', hideLightbox);
+      lightbox.addEventListener('click', (e) => {
+        if (e.target === lightbox) {
+          hideLightbox();
+        }
+      });
+
+      lightboxPrev.addEventListener('click', () => {
+        const newIndex = (currentIndex - 1 + currentImages.length) % currentImages.length;
+        showImage(newIndex);
+      });
+
+      lightboxNext.addEventListener('click', () => {
+        const newIndex = (currentIndex + 1) % currentImages.length;
+        showImage(newIndex);
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (lightbox.classList.contains('hidden')) return;
+        if (e.key === 'Escape') hideLightbox();
+        if (e.key === 'ArrowLeft') lightboxPrev.click();
+        if (e.key === 'ArrowRight') lightboxNext.click();
+      });
+    });
+  </script>
+</body></html>

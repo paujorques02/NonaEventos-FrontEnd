@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Eventful - Sobre Mí</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#ee2b8c",
+              "background-light": "#f8f6f7",
+              "background-dark": "#221019",
+              "content-light": "#1f1f1f",
+              "content-dark": "#e0e0e0",
+              "subtle-light": "#666666",
+              "subtle-dark": "#999999",
+              "border-light": "#e5e7eb",
+              "border-dark": "#374151",
+            },
+            fontFamily: {
+              "display": ["Epilogue"]
+            },
+            borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .timeline-line {
+            content: '';
+            position: absolute;
+            left: 12px;
+            top: 1.5rem;
+            bottom: 0;
+            width: 2px;
+            @apply bg-border-light dark:bg-border-dark;
+        }
+        .timeline-item:last-child .timeline-line {
+            display: none;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-content-light dark:text-content-dark">
+<div class="flex min-h-screen flex-col">
+<header class="sticky top-0 z-10 w-full bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm border-b border-border-light dark:border-border-dark">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex h-16 items-center justify-between">
+<div class="flex items-center gap-4">
+<div class="text-primary h-8 w-8">
+<svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M42.4379 44C42.4379 44 36.0744 33.9038 41.1692 24C46.8624 12.9336 42.2078 4 42.2078 4L7.01134 4C7.01134 4 11.6577 12.932 5.96912 23.9969C0.876273 33.9029 7.27094 44 7.27094 44L42.4379 44Z" fill="currentColor"></path>
+</svg>
+</div>
+<h1 class="text-2xl font-bold">Eventful</h1>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-sm font-medium hover:text-primary transition-colors" href="index.html">Inicio</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="servicios.html">Servicios</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="portfolio.html">Portafolio</a>
+<a class="text-sm font-bold text-primary" href="sobre-mi.html">Sobre Mí</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="contacto.html">Contacto</a>
+</nav>
+<button class="hidden md:inline-flex items-center justify-center rounded-full bg-primary px-6 py-2 text-sm font-bold text-white shadow-lg transition-transform hover:scale-105" onclick="window.location.href='contacto.html'">
+              Solicitar Presupuesto
+            </button>
+<button class="md:hidden text-content-light dark:text-content-dark">
+<svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+<line x1="3" x2="21" y1="12" y2="12"></line>
+<line x1="3" x2="21" y1="6" y2="6"></line>
+<line x1="3" x2="21" y1="18" y2="18"></line>
+</svg>
+</button>
+</div>
+</div>
+</header>
+<main class="flex-grow container mx-auto px-4 sm:px-6 lg:px-8 py-16">
+<div class="max-w-4xl mx-auto">
+<div class="text-center mb-12">
+<h2 class="text-4xl font-extrabold tracking-tight sm:text-5xl">Sobre Mí</h2>
+<p class="mt-4 max-w-2xl mx-auto text-lg text-subtle-light dark:text-subtle-dark">Mi nombre es Elena, y soy la fundadora de Eventful, una empresa dedicada a la planificación y organización de eventos especiales. Desde pequeña, siempre me ha fascinado la magia de crear momentos inolvidables, y esa pasión me ha llevado a convertir mi sueño en realidad.</p>
+</div>
+<div class="space-y-12">
+<div class="bg-primary/5 dark:bg-primary/10 rounded-lg p-8">
+<h3 class="text-2xl font-bold mb-4 text-primary">Mi Historia</h3>
+<p class="text-base leading-relaxed text-subtle-light dark:text-subtle-dark">Mi trayectoria en el mundo de los eventos comenzó de manera informal, ayudando a amigos y familiares a organizar sus celebraciones. Con cada evento, mi amor por esta profesión crecía, y decidí formarme profesionalmente para perfeccionar mis habilidades y conocimientos. He tenido el privilegio de trabajar en una variedad de eventos, desde bodas íntimas hasta grandes celebraciones corporativas, y cada experiencia ha enriquecido mi visión y me ha permitido crecer como profesional.</p>
+</div>
+<div class="bg-primary/5 dark:bg-primary/10 rounded-lg p-8">
+<h3 class="text-2xl font-bold mb-4 text-primary">Mi Filosofía</h3>
+<p class="text-base leading-relaxed text-subtle-light dark:text-subtle-dark">Creo firmemente que cada evento debe ser único y reflejar la personalidad y los deseos de mis clientes. Mi enfoque se centra en la atención al detalle, la creatividad y la dedicación para asegurar que cada celebración sea un éxito. Me esfuerzo por crear experiencias memorables que superen las expectativas y dejen una huella duradera en todos los asistentes.</p>
+</div>
+<div>
+<h3 class="text-3xl font-bold mb-8 text-center">Mi Currículum</h3>
+<div class="relative">
+<div class="timeline-item relative pl-10 pb-10">
+<div class="timeline-line"></div>
+<div class="absolute left-0 top-1.5 flex h-6 w-6 items-center justify-center rounded-full bg-primary text-white">
+<svg fill="currentColor" height="16" viewBox="0 0 256 256" width="16" xmlns="http://www.w3.org/2000/svg"><path d="M216,56H176V48a24,24,0,0,0-24-24H104A24,24,0,0,0,80,48v8H40A16,16,0,0,0,24,72V200a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V72A16,16,0,0,0,216,56ZM96,48a8,8,0,0,1,8-8h48a8,8,0,0,1,8,8v8H96ZM216,72v41.61A184,184,0,0,1,128,136a184.07,184.07,0,0,1-88-22.38V72Zm0,128H40V131.64A200.19,200.19,0,0,0,128,152a200.25,200.25,0,0,0,88-20.37V200ZM104,112a8,8,0,0,1,8-8h32a8,8,0,0,1,0,16H112A8,8,0,0,1,104,112Z"></path></svg>
+</div>
+<div class="ml-4">
+<p class="font-bold text-lg">Fundadora de Eventful</p>
+<p class="text-sm text-subtle-light dark:text-subtle-dark">2018 - Actualidad</p>
+</div>
+</div>
+<div class="timeline-item relative pl-10 pb-10">
+<div class="timeline-line"></div>
+<div class="absolute left-0 top-1.5 flex h-6 w-6 items-center justify-center rounded-full bg-primary text-white">
+<svg fill="currentColor" height="16" viewBox="0 0 256 256" width="16" xmlns="http://www.w3.org/2000/svg"><path d="M208,32H184V24a8,8,0,0,0-16,0v8H88V24a8,8,0,0,0-16,0v8H48A16,16,0,0,0,32,48V208a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V48A16,16,0,0,0,208,32ZM72,48v8a8,8,0,0,0,16,0V48h80v8a8,8,0,0,0,16,0V48h24V80H48V48ZM208,208H48V96H208V208Z"></path></svg>
+</div>
+<div class="ml-4">
+<p class="font-bold text-lg">Coordinadora de Eventos en Celebraciones Mágicas</p>
+<p class="text-sm text-subtle-light dark:text-subtle-dark">2015 - 2018</p>
+</div>
+</div>
+<div class="timeline-item relative pl-10">
+<div class="absolute left-0 top-1.5 flex h-6 w-6 items-center justify-center rounded-full bg-primary text-white">
+<svg fill="currentColor" height="16" viewBox="0 0 256 256" width="16" xmlns="http://www.w3.org/2000/svg"><path d="M208,32H184V24a8,8,0,0,0-16,0v8H88V24a8,8,0,0,0-16,0v8H48A16,16,0,0,0,32,48V208a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V48A16,16,0,0,0,208,32ZM72,48v8a8,8,0,0,0,16,0V48h80v8a8,8,0,0,0,16,0V48h24V80H48V48ZM208,208H48V96H208V208Z"></path></svg>
+</div>
+<div class="ml-4">
+<p class="font-bold text-lg">Asistente de Planificación en Eventos Elegantes</p>
+<p class="text-sm text-subtle-light dark:text-subtle-dark">2013 - 2015</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<footer class="bg-background-light dark:bg-background-dark border-t border-border-light dark:border-border-dark">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
+<div class="flex flex-col items-center justify-center gap-6">
+<div class="flex flex-wrap items-center justify-center gap-x-8 gap-y-4">
+<a class="text-sm text-subtle-light dark:text-subtle-dark hover:text-primary transition-colors" href="index.html">Inicio</a>
+<a class="text-sm text-subtle-light dark:text-subtle-dark hover:text-primary transition-colors" href="servicios.html">Servicios</a>
+<a class="text-sm text-subtle-light dark:text-subtle-dark hover:text-primary transition-colors" href="portfolio.html">Portafolio</a>
+<a class="text-sm text-subtle-light dark:text-subtle-dark hover:text-primary transition-colors" href="sobre-mi.html">Sobre Mí</a>
+<a class="text-sm text-subtle-light dark:text-subtle-dark hover:text-primary transition-colors" href="contacto.html">Contacto</a>
+</div>
+<div class="flex justify-center space-x-6">
+<a class="text-subtle-light dark:text-subtle-dark hover:text-primary transition-colors" href="#">
+<svg aria-hidden="true" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path clip-rule="evenodd" d="M12.315 2c-4.048 0-4.522.016-6.11.09-1.58.076-2.665.34-3.606 1.282C1.65 4.312.38 5.397.304 6.977c-.074 1.588-.09 2.062-.09 6.11s.016 4.522.09 6.11c.076 1.58.34 2.665 1.282 3.606C2.624 22.05 3.71 22.32 5.29 22.395c1.588.075 2.062.09 6.11.09s4.522-.015 6.11-.09c1.58-.075 2.665-.34 3.606-1.282 1.036-1.036 1.282-2.076 1.282-3.606.075-1.588.09-2.062.09-6.11s-.015-4.522-.09-6.11c-.075-1.58-.34-2.665-1.282-3.606C21.08 2.38 20.002 2.11 18.42 2.035 16.83.196 16.358.18 12.315 2zm0 1.62c4.003 0 4.444.015 6.018.087 1.403.066 2.193.33 2.76.793.6.495.918 1.1.985 2.51.072 1.574.088 2.015.088 6.018s-.016 4.444-.088 6.018c-.067 1.41-.385 2.015-.985 2.51-.567.463-1.357.727-2.76.793-1.574.072-2.015.088-6.018.088s-4.444-.016-6.018-.088c-1.403-.066-2.193-.33-2.76-.793-.6-.495-.918-1.1-.985-2.51C3.712 16.444 3.696 16.003 3.696 12s.016-4.444.088-6.018c.067-1.41.385-2.015.985-2.51.567-.463 1.357-.727 2.76-.793C7.87 3.612 8.312 3.598 12.315 3.62zM12 7.182a4.818 4.818 0 100 9.636 4.818 4.818 0 000-9.636zm0 1.62a3.198 3.198 0 110 6.395 3.198 3.198 0 010-6.395zM18.09 5.37a1.44 1.44 0 100 2.88 1.44 1.44 0 000-2.88z" fill-rule="evenodd"></path></svg>
+</a>
+<a class="text-subtle-light dark:text-subtle-dark hover:text-primary transition-colors" href="#">
+<svg aria-hidden="true" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path clip-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" fill-rule="evenodd"></path></svg>
+</a>
+</div>
+<p class="text-center text-sm text-subtle-light dark:text-subtle-dark">© 2024 Eventful. Todos los derechos reservados.</p>
+</div>
+</div>
+</footer>
+</div>
+
+</body></html>
