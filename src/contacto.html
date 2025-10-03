@@ -202,9 +202,14 @@
   <div class="bg-white dark:bg-background-dark rounded-lg shadow-xl w-full max-w-md h-[80vh] flex flex-col">
     <div class="flex justify-between items-center p-4 border-b border-primary/20 dark:border-primary/30">
       <h3 class="text-lg font-bold text-zinc-900 dark:text-zinc-100">Chatbot de Eventful</h3>
-      <button id="close-chatbot" class="text-zinc-600 hover:text-primary dark:text-zinc-400 dark:hover:text-primary">
-        <span class="material-symbols-outlined">close</span>
-      </button>
+      <div class="flex items-center gap-2">
+        <button id="new-chat-btn" title="Nueva Conversación" class="text-zinc-600 hover:text-primary dark:text-zinc-400 dark:hover:text-primary">
+          <span class="material-symbols-outlined">add_comment</span>
+        </button>
+        <button id="close-chatbot" class="text-zinc-600 hover:text-primary dark:text-zinc-400 dark:hover:text-primary">
+          <span class="material-symbols-outlined">close</span>
+        </button>
+      </div>
     </div>
     <div id="chat-messages" class="flex-1 p-4 overflow-y-auto space-y-4">
       <!-- Chat messages will appear here -->
@@ -226,27 +231,72 @@
     const chatMessages = document.getElementById('chat-messages');
     const chatInput = document.getElementById('chat-input');
     const sendChatMessageBtn = document.getElementById('send-chat-message');
+    const newChatBtn = document.getElementById('new-chat-btn');
+
+    // --- Gestión de IDs ---
+    let userId = localStorage.getItem('user_id');
+    if (!userId) {
+      userId = crypto.randomUUID();
+      localStorage.setItem('user_id', userId);
+    }
+
+    // Generar un chat_id inicial si no existe
+    if (!localStorage.getItem('chat_id')) {
+      localStorage.setItem('chat_id', crypto.randomUUID());
+    }
 
     if (openChatbotBtn && chatbotModal && closeChatbotBtn && chatMessages) {
+      
+      function getChatHistory() {
+        const chatId = localStorage.getItem('chat_id');
+        if (!chatId) return [];
+        const history = localStorage.getItem(`chat_history_${chatId}`);
+        return history ? JSON.parse(history) : [];
+      }
+
+      function saveMessageToHistory(sender, message) {
+        const chatId = localStorage.getItem('chat_id');
+        if (!chatId) return;
+        const history = getChatHistory();
+        history.push({ sender, message });
+        localStorage.setItem(`chat_history_${chatId}`, JSON.stringify(history));
+      }
+
+      function startNewConversation() {
+        chatMessages.innerHTML = '';
+        const newChatId = crypto.randomUUID();
+        localStorage.setItem('chat_id', newChatId);
+        localStorage.removeItem(`chat_history_${newChatId}`); // Limpia historial antiguo si existiera
+        const welcomeMessage = 'Hola buenos dias en que puedo ayudarte';
+        addMessageToChat('chatbot', welcomeMessage);
+        saveMessageToHistory('chatbot', welcomeMessage);
+      }
+
       openChatbotBtn.addEventListener('click', () => {
         chatbotModal.classList.remove('hidden');
-        // Add initial message
-        addMessageToChat('chatbot', 'Hola buenos dias en que puedo ayudarte');
+        chatMessages.innerHTML = ''; // Limpiar vista
+        const history = getChatHistory();
+        if (history.length === 0) {
+          startNewConversation();
+        } else {
+          history.forEach(msg => addMessageToChat(msg.sender, msg.message));
+        }
       });
 
       closeChatbotBtn.addEventListener('click', () => {
         chatbotModal.classList.add('hidden');
-        // Clear messages when closing
-        chatMessages.innerHTML = '';
       });
 
       // Optional: Close modal when clicking outside
       chatbotModal.addEventListener('click', (e) => {
         if (e.target === chatbotModal) {
           chatbotModal.classList.add('hidden');
-          chatMessages.innerHTML = '';
         }
       });
+
+      if (newChatBtn) {
+        newChatBtn.addEventListener('click', startNewConversation);
+      }
 
       function addMessageToChat(sender, message) {
         const messageElement = document.createElement('div');
@@ -290,19 +340,22 @@
           const userMessage = chatInput.value.trim();
           if (userMessage) {
             addMessageToChat('user', userMessage);
+            saveMessageToHistory('user', userMessage);
             chatInput.value = '';
             showTypingIndicator();
 
             // --- Integración con el Backend ---
             try {
-              // Ajustado para que coincida con tu endpoint de FastAPI/Flask. Asegúrate de que el host y puerto sean correctos.
-              const response = await fetch('http://127.0.0.1:5000/prueba', {
+              const currentUserId = localStorage.getItem('user_id');
+              const currentChatId = localStorage.getItem('chat_id');
+
+              const response = await fetch('http://localhost:5000/prueba', {
                 method: 'POST',
                 headers: {
                   'Content-Type': 'application/json',
                 },
-                // Tu backend espera un JSON con la clave "message", lo cual ya se está enviando.
-                body: JSON.stringify({ message: userMessage }),
+                // Enviamos user_id, chat_id y el mensaje
+                body: JSON.stringify({ user_id: currentUserId, chat_id: currentChatId, message: userMessage }),
               });
 
               hideTypingIndicator();
@@ -311,10 +364,11 @@
               }
 
               const data = await response.json();
-              // Tu backend responde con un JSON con la clave "message".
-              const botResponse = data.message;
+              // Tu backend responde con un JSON con la clave "reply".
+              const botResponse = data.reply;
 
               addMessageToChat('chatbot', botResponse);
+              saveMessageToHistory('chatbot', botResponse);
             } catch (error) {
               hideTypingIndicator();
               console.error('Error al conectar con el backend del chatbot:', error);
