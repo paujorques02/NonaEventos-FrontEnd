@@ -1,0 +1,16 @@
+{
+  "placeholderImages": [
+    {
+      "id": "hero-background",
+      "description": "Elegante montaje de recepción de boda al aire libre al atardecer con luces de hadas.",
+      "imageUrl": "/images/index_image.jpg",
+      "imageHint": "wedding reception"
+    },
+    {
+      "id": "about-planner",
+      "description": "Retrato de una planificadora de eventos sonriente sosteniendo un portapapeles.",
+      "imageUrl": "/images/elsaH_image.jpg",
+      "imageHint": "woman smiling"
+    }
+  ]
+}
