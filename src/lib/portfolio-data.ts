@@ -1,6 +1,3 @@
-
-import { PlaceHolderImages } from "./placeholder-images";
-
 export interface PortfolioCategory {
   id: 'bodas' | 'corporativos' | 'otros';
   title: string;

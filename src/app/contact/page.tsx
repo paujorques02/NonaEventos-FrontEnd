@@ -4,7 +4,6 @@ import { useState } from 'react';
 import { ContactForm } from '@/components/contact-form';
 import { Chatbot } from '@/components/chatbot';
 import { Mail, Phone, MapPin } from 'lucide-react';
-import Link from 'next/link';
 
 // Define a type for the shared form data
 export type FormData = {

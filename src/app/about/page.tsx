@@ -1,7 +1,6 @@
-
 import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
-import { Card, CardContent } from '@/components/ui/card';
+import { Card } from '@/components/ui/card';
 import { Check } from 'lucide-react';
 
 const plannerImage = PlaceHolderImages.find(img => img.id === 'about-planner');

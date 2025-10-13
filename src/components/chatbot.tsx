@@ -51,7 +51,11 @@ export function Chatbot({ onUpdate }: ChatbotProps) {
     let botMessage: Message;
 
     try {
-      const response = await fetch('/api/chatbot', {
+      const apiUrl = process.env.NODE_ENV === 'production' 
+        ? `${process.env.NEXT_PUBLIC_API_URL}/api/chatbot` 
+        : '/api/chatbot';
+
+      const response = await fetch(apiUrl, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

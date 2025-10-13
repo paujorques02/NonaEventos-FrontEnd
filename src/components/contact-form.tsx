@@ -68,7 +68,7 @@ export function ContactForm({ initialData }: ContactFormProps) {
         }
       }
     }
-  }, [initialData, form.setValue]);
+  }, [initialData, form]);
 
   const { isSubmitting } = form.formState;
 
