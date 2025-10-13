@@ -59,6 +59,7 @@ export function Chatbot({ onUpdate }: ChatbotProps) {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
+          'X-API-Key': process.env.NEXT_PUBLIC_BACKEND_API_KEY || ''
         },
         body: JSON.stringify({ 
           message: currentInput,
